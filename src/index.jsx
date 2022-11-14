@@ -6,6 +6,7 @@ import reduxPromise from 'redux-promise';
 import logger from 'redux-logger';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createHistory as history } from 'history';
+import { reducer as formReducer } from 'redux-form';
 
 import carsReducer from './reducers/cars_reducer';
 import CarsIndex from './containers/cars_index';
@@ -23,7 +24,8 @@ const initialState = {
 
 const reducers = combineReducers({
   cars: carsReducer,
-  garage: (state = null, action) => state
+  garage: (state = null, action) => state,
+  form: formReducer
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
+import { Link } from "react-router-dom";
 
 import Car from "../components/car";
 import { listCars } from "../actions";
@@ -20,6 +21,7 @@ class CarsIndex extends Component {
     return (
       <div>
         <h1>Welcome to {this.props.garage}</h1>
+        <Link to="/cars/new">Add Listing</Link>
         <ul>
           {this.renderCars()}
         </ul>
