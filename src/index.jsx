@@ -13,6 +13,8 @@ import CarsIndex from './containers/cars_index';
 
 import CarsNew from './containers/cars_new';
 
+import CarShow from './containers/car_show';
+
 import '../assets/stylesheets/application.scss';
 
 // eslint-disable-next-line no-alert
@@ -37,6 +39,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact component={CarsIndex} />
         <Route path="/cars/new" exact component={CarsNew} />
+        <Route path="/car/:id" component={CarShow} />
       </Switch>
     </Router>
   </Provider>,
