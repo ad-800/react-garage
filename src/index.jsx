@@ -18,10 +18,10 @@ import CarShow from './containers/car_show';
 import '../assets/stylesheets/application.scss';
 
 // eslint-disable-next-line no-alert
-const garageName = prompt("What is your garage?") || `garage${Math.floor(10 + (Math.random() * 90))}`;
+// const garageName = prompt("What is your garage?") || `garage${Math.floor(10 + (Math.random() * 90))}`;
 const initialState = {
   cars: [],
-  garage: garageName
+  garage: 'ad-coches'
 };
 
 const reducers = combineReducers({

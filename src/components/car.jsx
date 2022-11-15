@@ -6,7 +6,7 @@ function Car(props) {
     <li>
       <h2>{props.car.brand} - {props.car.model}</h2>
       <p><strong>Owner:</strong> {props.car.owner}</p>
-      <Link to={`/car/${props.car.id}`} key={props.car.id} />
+      <Link to={`/car/${props.car.id}`} key={props.car.id}>See More</Link>
     </li>
   );
 }
